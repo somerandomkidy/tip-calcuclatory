@@ -1,0 +1,152 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #12e4af, #12c8e0);
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.app
+{
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    background: #fff;
+    border-radius: 16px;
+overflow-x: hidden;
+overflow-y: hidden;
+box-shadow: 0px 0px 200px rgba(0, 0, 0, 0.2);
+
+&:after
+{
+    content: '';
+    display: block;
+    padding-top: calc(100% / (3/4));
+}
+}
+.calculator
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 100%;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+
+header 
+{
+    background-color: #12e09b;
+    padding: 10px 15px;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
+    h1{ 
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 24px;
+        text-align: center;
+
+}
+}
+main {
+flex:1 1 100%;
+overflow-y:hidden;
+padding: 20px 15px;
+.input-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+.pre
+{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px; 
+    color: #0bb971;
+    font-size: 24px;
+    border-bottom: 3px solid #0bb971;
+    background: #eee;
+    border-radius: 8px 0px 0px 0px;
+}
+input
+{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border-bottom: 3px solid #19d166;
+
+    &::placeholder {
+color: #666;
+    font-size: 14px;
+}
+}
+select{
+-webkit-appearence:none;
+appearance:none;
+border: none;
+outline: none;
+background: none;
+display: block;
+width:100%;
+border-bottom: 3px solid #3be286;
+border-radius: 0px;
+color: #383838;
+font-size: 16px;
+padding-inline: 10px 15px;
+  }
+}
+.tip-wrap
+{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .tip
+    {
+        padding: 15px 25px;
+        box-shadow: 9px 9px 90px rgba(0, 0, 0, 0.2);
+        background-image: linear-gradient(to bottom right, #1fc5bd, hsl(160, 100%, 44%));
+        color: #ffffff;
+    }
+  }
+}
+footer
+{
+    box-shadow: 0px -3px 12px rgba(0, 0, 0, 0.2);
+
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px 15px;
+        appearance: none;
+        border: none;
+        outline: none;
+        background-image: linear-gradient(to bottom right, #09d5e4, #1de7bb);
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
